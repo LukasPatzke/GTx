@@ -293,7 +293,10 @@
 \subsection{Read Data}\label{read-data}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{n}{data} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{read.delim}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{credit\PYZus{}card\PYZus{}data\PYZhy{}headers.txt\PYZdq{}}\PY{p}{,} \PY{n}{header} \PY{o}{=} \PY{k+kc}{TRUE}\PY{p}{,} \PY{n}{sep} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZbs{}t\PYZdq{}}\PY{p}{,} \PY{n}{dec} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{.\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{n}{data} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{read.delim}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{credit\PYZus{}card\PYZus{}data\PYZhy{}headers.txt\PYZdq{}}\PY{p}{,} 
+                           \PY{n}{header} \PY{o}{=} \PY{k+kc}{TRUE}\PY{p}{,} 
+                           \PY{n}{sep} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZbs{}t\PYZdq{}}\PY{p}{,} 
+                           \PY{n}{dec} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{.\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
 
@@ -317,16 +320,6 @@
 \end{tabular}
 
 
-    
-    \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}81}]:} \PY{n+nf}{plot}\PY{p}{(}\PY{n}{data}\PY{n}{[}\PY{p}{,}\PY{l+m}{1}\PY{o}{:}\PY{l+m}{10}\PY{n}{]}\PY{p}{,} \PY{n}{col}\PY{o}{=}\PY{n+nf}{ifelse}\PY{p}{(}\PY{n}{data}\PY{n}{[}\PY{p}{,}\PY{l+m}{11}\PY{n}{]}\PY{o}{==}\PY{l+m}{1}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{red\PYZsq{}}\PY{p}{,}\PY{l+s}{\PYZsq{}}\PY{l+s}{green\PYZsq{}}\PY{p}{)}\PY{p}{)}
-\end{Verbatim}
-
-
-    \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_6_0.png}
-    \end{center}
-    { \hspace*{\fill} \\}
     
     \hypertarget{svm}{%
 \section{SVM}\label{svm}}
@@ -404,7 +397,7 @@
 
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_12_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_11_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -465,7 +458,14 @@
 \subsubsection{Try other kernels}\label{try-other-kernels}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}90}]:} \PY{n}{kernels} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{rbfdot\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{polydot\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{vanilladot\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{tanhdot\PYZdq{}}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{laplacedot\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{besseldot\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{anovadot\PYZdq{}}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{splinedot\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}90}]:} \PY{n}{kernels} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{rbfdot\PYZdq{}}\PY{p}{,} 
+                      \PY{l+s}{\PYZdq{}}\PY{l+s}{polydot\PYZdq{}}\PY{p}{,} 
+                      \PY{l+s}{\PYZdq{}}\PY{l+s}{vanilladot\PYZdq{}}\PY{p}{,} 
+                      \PY{l+s}{\PYZdq{}}\PY{l+s}{tanhdot\PYZdq{}}\PY{p}{,}
+                      \PY{l+s}{\PYZdq{}}\PY{l+s}{laplacedot\PYZdq{}}\PY{p}{,} 
+                      \PY{l+s}{\PYZdq{}}\PY{l+s}{besseldot\PYZdq{}}\PY{p}{,} 
+                      \PY{l+s}{\PYZdq{}}\PY{l+s}{anovadot\PYZdq{}}\PY{p}{,} 
+                      \PY{l+s}{\PYZdq{}}\PY{l+s}{splinedot\PYZdq{}}\PY{p}{)}
          \PY{n}{performance} \PY{o}{\PYZlt{}\PYZhy{}} \PY{n+nf}{c}\PY{p}{(}\PY{p}{)}
          
          \PY{n+nf}{for }\PY{p}{(}\PY{n}{i} \PY{n}{in} \PY{n+nf}{seq\PYZus{}along}\PY{p}{(}\PY{n}{kernels}\PY{p}{)}\PY{p}{)} \PY{p}{\PYZob{}}
@@ -490,7 +490,7 @@
 
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_19_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_18_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
@@ -545,7 +545,7 @@ k}\label{try-different-values-for-k}}
 
 
     \begin{center}
-    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_25_0.png}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_24_0.png}
     \end{center}
     { \hspace*{\fill} \\}
     
